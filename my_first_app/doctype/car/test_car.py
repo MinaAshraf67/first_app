@@ -6,4 +6,5 @@ from frappe.tests.utils import FrappeTestCase
 
 
 class TestCar(FrappeTestCase):
-	pass
+    if manga == 0:
+        print("manga")
