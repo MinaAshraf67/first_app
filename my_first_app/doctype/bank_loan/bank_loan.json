@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-05-05 11:10:09.425828",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_qt3d",
+  "amended_from",
+  "naming_series",
+  "bank_name",
+  "column_break_zuo8",
+  "company",
+  "posting_date",
+  "status",
+  "column_break_bjbc",
+  "loan_amount",
+  "interest",
+  "repayment_date",
+  "column_break_9pko",
+  "repayment_months",
+  "monthly_repayment",
+  "section_break_votw",
+  "loan_account",
+  "disbursement_account",
+  "column_break_s9uu",
+  "repayment_account",
+  "section_break_ukfa",
+  "schedule"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_qt3d",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bank Loan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "LOAN-.YYYY.-"
+  },
+  {
+   "fieldname": "bank_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Company",
+   "reqd": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status"
+  },
+  {
+   "fieldname": "column_break_zuo8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bjbc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "loan_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Loan Amount",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "percentage",
+   "fieldname": "interest",
+   "fieldtype": "Float",
+   "label": "Interest"
+  },
+  {
+   "fieldname": "repayment_months",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Repayment months",
+   "reqd": 1
+  },
+  {
+   "fieldname": "monthly_repayment",
+   "fieldtype": "Data",
+   "label": "Monthly repayment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9pko",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_votw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "loan_account",
+   "fieldtype": "Link",
+   "label": "Loan account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "disbursement_account",
+   "fieldtype": "Link",
+   "label": "Disbursement account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_s9uu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "repayment_account",
+   "fieldtype": "Link",
+   "label": "Repayment account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_ukfa",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "schedule",
+   "fieldtype": "Table",
+   "label": "Schedule",
+   "options": "Repayment Schedule"
+  },
+  {
+   "fieldname": "repayment_date",
+   "fieldtype": "Date",
+   "label": "Repayment Date"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-05 16:20:33.786736",
+ "modified_by": "Administrator",
+ "module": "My First App",
+ "name": "Bank Loan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
