@@ -1,4 +1,6 @@
 {
+ "_comments": "[]",
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
@@ -21,6 +23,7 @@
   "column_break_9pko",
   "repayment_months",
   "monthly_repayment",
+  "auto_repayment",
   "section_break_votw",
   "loan_account",
   "disbursement_account",
@@ -52,9 +55,10 @@
   },
   {
    "fieldname": "bank_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Bank Name",
+   "options": "Bank person",
    "reqd": 1
   },
   {
@@ -71,9 +75,12 @@
    "label": "Posting Date"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "status",
    "fieldtype": "Select",
-   "label": "Status"
+   "label": "Status",
+   "options": "Draft\nUnpaid\nPartially paid\nPaid\nCanceled\nAccrued",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_zuo8",
@@ -145,22 +152,30 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "schedule",
    "fieldtype": "Table",
-   "label": "Schedule",
-   "options": "Repayment Schedule"
+   "label": "Bank Loan Schedule",
+   "options": "Bank loan schedule"
   },
   {
    "fieldname": "repayment_date",
    "fieldtype": "Date",
-   "label": "Repayment Date"
+   "label": "Repayment Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "auto_repayment",
+   "fieldtype": "Check",
+   "label": "Auto Repayment"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-05 16:20:33.786736",
+ "modified": "2025-05-08 10:47:28.415205",
  "modified_by": "Administrator",
  "module": "My First App",
  "name": "Bank Loan",
